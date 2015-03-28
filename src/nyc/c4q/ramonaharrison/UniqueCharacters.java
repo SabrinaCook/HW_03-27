@@ -17,10 +17,8 @@ public class UniqueCharacters {
         String s2 = "";
 
         for (int i = 0; i < s.length(); i++) {          // for each letter in the input string
-            if (s2.contains(s.substring(i, i + 1))) {   // checks if the output string already has it
-                continue;
-            }
-            s2 += s.charAt(i);                          // adds each unique letter to the output string
+            if (!s2.contains(s.substring(i, i + 1)))    // checks if the output string already has it
+                s2 += s.charAt(i);                      // adds each unique letter to the output string
         }
 
         return s2;

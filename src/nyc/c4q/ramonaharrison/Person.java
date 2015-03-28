@@ -11,9 +11,9 @@ package nyc.c4q.ramonaharrison;
 
 public class Person {
 
-    public String name;
-    public String phoneNumber;
-    public String city;
+    private String name;
+    private String phoneNumber;
+    private String city;
 
     public Person(String name, String phoneNumber, String city) {
         this.name = name;
@@ -46,11 +46,7 @@ public class Person {
     }
 
     public static boolean checkSameCity(Person first, Person second) {
-        if (first.city.equalsIgnoreCase(second.city)) {
-            return true;
-        } else {
-            return false;
-        }
+        return (first.city.equalsIgnoreCase(second.city));
     }
 
     public static Person registerChild(String name, Person parent) {
