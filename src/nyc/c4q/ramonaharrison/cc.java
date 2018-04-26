@@ -1,19 +1,16 @@
 package nyc.c4q.ramonaharrison;
 
-/**
- * Access Code 2.1
- * Ramona Harrison
- * CaesarCipher.java
- * A Caesar Cipher using string arrays and user specified offsets
- *
- */
-
+//Sabrina Cook
+//Fixed cipher
+import java.io.ObjectStreamField;
 import java.util.Scanner;
 
-public class CaesarCipher {
+
+public class cc {
 
     public static String encode(String input, int offset) {
-        String alphabet = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz";
+        String a = "abcdefghijklmnopqrstuvwxyz";
+        String alphabet= new String(new char[a.length()]).replace("\0", a);
         String[] alpha = alphabet.split("");
         String[] splitInput = input.toLowerCase().split("");
         String message = "";
@@ -47,7 +44,7 @@ public class CaesarCipher {
     }
 
     public static void main(String[] args) {
-        System.out.println("Welcome to the Caesar Cipher   ||   Jrypbzr gb gur Pnrfne Pvcure\n\n");
+        System.out.println("Welcome to the Caesar Cipher");
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Would you like to encode, decode, or codebreak?");
